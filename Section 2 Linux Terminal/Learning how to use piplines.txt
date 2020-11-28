@@ -1,0 +1,11 @@
+Learning Linux
+
+make file 1 and 2 using piplines
+
+ls -1hs /etc | cat > file1.txt
+ls -1hs /run | cat > file2.txt
+
+
+then combine them into 1 file store a copy of the unsorted version and and sort the file and store into a sorted version
+
+cat file1.txt file2.txt | tee unsorted.txt | sort -r > reversed.txt 
