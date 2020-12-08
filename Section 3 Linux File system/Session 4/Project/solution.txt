@@ -1,0 +1,15 @@
+//making the folder
+mkdir super_secret_stuff
+
+
+//making the file in folder
+touch super_secret_stuff/top_secret.txt
+
+//update database so locate functions
+sudo updatedb //will need password
+
+//pipe location into another file
+locate top_secret.txt > secret_place.txt
+
+//using the find command
+sudo find / -maxdepth 4 -size +1M - type f -exec ls -lh {} \; | sort -k 5nr > /home/myname/filesizes.txt
